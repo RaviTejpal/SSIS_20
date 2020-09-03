@@ -11,8 +11,8 @@
   DTS:LocaleID="16393"
   DTS:ObjectName="MoveFile"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{B8FB857B-4B12-4D6A-B6D8-F63B1291F1DB}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{3D040587-48B2-4BED-BC76-7F580422EFFB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:PackageParameters>
@@ -47,7 +47,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="Destination">
       <DTS:VariableValue
-        DTS:DataType="8">C:\Users\Hp\Documents\Jagrity_Assignements\</DTS:VariableValue>
+        DTS:DataType="8">C:\Users\Hp\Documents\Jagrity_Assignements</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -56,7 +56,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="Source">
       <DTS:VariableValue
-        DTS:DataType="8">C:\Users\Hp\Documents\</DTS:VariableValue>
+        DTS:DataType="8">C:\Users\Hp\Documents\Maths</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -72,7 +72,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <FileSystemData
-          TaskOperationType="MoveFile"
+          TaskOperationType="CopyDirectory"
           TaskSourcePath="User::Source"
           TaskIsSourceVariable="True"
           TaskDestinationPath="User::Destination"

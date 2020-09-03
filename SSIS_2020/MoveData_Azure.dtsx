@@ -1,0 +1,106 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/23/2020 4:50:08 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="SUNNY"
+  DTS:CreatorName="SUNNY\Hp"
+  DTS:DTSID="{0D4F0FB8-17C3-46B2-8D55-785F9BD0497F}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1300.371"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="MoveData_Azure"
+  DTS:PackageType="5"
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{999DC655-C3E1-4B9F-AF6B-2EA13409FA56}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{96FB9FF3-1CCF-4E59-B63D-8E06A6C05F84}"
+      DTS:ObjectName="Destination">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">C:\Users\Hp\Documents\Jagrity_Assignements</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{F752B457-7CAB-4906-864D-83B87F959C71}"
+      DTS:ObjectName="DestinationFileName">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">AA.PDF</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{B8DF7D42-3465-4058-B6D1-2BF30531DC13}"
+      DTS:ObjectName="Source">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">C:\Users\Hp\Documents\Maths</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{C3F5D51C-F89E-4C62-9D6B-925486D7288B}"
+      DTS:ObjectName="SourceFileName">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">7th algebra mutiplication.pdf</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Flexible File Task"
+      DTS:CreationName="ExtensibleFileTask"
+      DTS:Description="Flexible File Task"
+      DTS:DTSID="{6C37DF8E-7ECE-49F2-9546-BDA7D671CB2E}"
+      DTS:ExecutableType="ExtensibleFileTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Flexible File Task"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:PropertyExpression
+        DTS:Name="DestinationFolderPath">@[$Package::Destination]</DTS:PropertyExpression>
+      <DTS:PropertyExpression
+        DTS:Name="SourceFolderPath">@[$Package::Source]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <ExtensibleFileTask
+          Operation="Copy"
+          SourceConnectionType="LocalFileSystem"
+          SourceFolderPath="C:\Users\Hp\Documents\Maths"
+          SourceFileName="7th algebra mutiplication.pdf"
+          SearchRecursively="False"
+          DestinationConnectionType="LocalFileSystem"
+          DestinationFolderPath="C:\Users\Hp\Documents\Jagrity_Assignements"
+          DestinationFileName="aa.pdf"
+          ConnectionType="LocalFileSystem" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="160,42.6666666666667"
+          Id="Package\Flexible File Task"
+          TopLeft="84.537035777337,38.9518511553385" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
